@@ -1,7 +1,7 @@
 object Form4: TForm4
   Left = 0
   Top = 0
-  Caption = 'TDC POA 2018 | Cacheamento'
+  Caption = 'TDC POA - 2018 | Cacheamento'
   ClientHeight = 509
   ClientWidth = 778
   Color = clBtnFace
@@ -29,8 +29,6 @@ object Form4: TForm4
     Caption = 'Panel1'
     ShowCaption = False
     TabOrder = 0
-    ExplicitLeft = 10
-    ExplicitTop = 11
     object Button1: TButton
       Left = 8
       Top = 18
@@ -79,10 +77,6 @@ object Form4: TForm4
     Caption = 'Panel2'
     ShowCaption = False
     TabOrder = 2
-    ExplicitLeft = 448
-    ExplicitTop = 296
-    ExplicitWidth = 185
-    ExplicitHeight = 41
     object DBGrid1: TDBGrid
       AlignWithMargins = True
       Left = 6
@@ -136,9 +130,6 @@ object Form4: TForm4
         'Memo1')
       ParentFont = False
       TabOrder = 1
-      ExplicitLeft = 427
-      ExplicitTop = 9
-      ExplicitWidth = 335
     end
   end
   object FDConnection1: TFDConnection

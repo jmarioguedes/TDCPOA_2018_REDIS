@@ -36,13 +36,13 @@ uses
   FireDAC.DApt.Intf,
   FireDAC.DApt,
   FireDAC.Comp.DataSet,
+  FireDAC.Stan.StorageJSON,
   Vcl.StdCtrls,
 
   Redis.Commons,
   Redis.Client,
   Redis.NetLib.INDY,
-  Redis.Values,
-  FireDAC.Stan.StorageJSON
+  Redis.Values
 
     ;
 

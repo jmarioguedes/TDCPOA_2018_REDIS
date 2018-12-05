@@ -12,6 +12,12 @@
         <Projects Include="D_cacheamento\cacheamento.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="F_produtor\produtor.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="G_consumidor\consumidor.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -47,14 +53,32 @@
     <Target Name="cacheamento:Make">
         <MSBuild Projects="D_cacheamento\cacheamento.dproj" Targets="Make"/>
     </Target>
+    <Target Name="produtor">
+        <MSBuild Projects="F_produtor\produtor.dproj"/>
+    </Target>
+    <Target Name="produtor:Clean">
+        <MSBuild Projects="F_produtor\produtor.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="produtor:Make">
+        <MSBuild Projects="F_produtor\produtor.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="consumidor">
+        <MSBuild Projects="G_consumidor\consumidor.dproj"/>
+    </Target>
+    <Target Name="consumidor:Clean">
+        <MSBuild Projects="G_consumidor\consumidor.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="consumidor:Make">
+        <MSBuild Projects="G_consumidor\consumidor.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="basico;benchmark;cacheamento"/>
+        <CallTarget Targets="basico;benchmark;cacheamento;produtor;consumidor"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="basico:Clean;benchmark:Clean;cacheamento:Clean"/>
+        <CallTarget Targets="basico:Clean;benchmark:Clean;cacheamento:Clean;produtor:Clean;consumidor:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="basico:Make;benchmark:Make;cacheamento:Make"/>
+        <CallTarget Targets="basico:Make;benchmark:Make;cacheamento:Make;produtor:Make;consumidor:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

@@ -1,7 +1,7 @@
 object Form3: TForm3
   Left = 0
   Top = 0
-  Caption = 'TDC POA 2018 | Benchmark'
+  Caption = 'TDC POA - 2018 | Benchmark'
   ClientHeight = 529
   ClientWidth = 604
   Color = clBtnFace
@@ -28,9 +28,6 @@ object Form3: TForm3
     Caption = 'Panel1'
     ShowCaption = False
     TabOrder = 0
-    ExplicitLeft = 0
-    ExplicitTop = 10
-    ExplicitWidth = 786
     object Button1: TButton
       Left = 8
       Top = 17
@@ -65,10 +62,6 @@ object Form3: TForm3
     Caption = 'Panel2'
     ShowCaption = False
     TabOrder = 1
-    ExplicitLeft = 488
-    ExplicitTop = 192
-    ExplicitWidth = 185
-    ExplicitHeight = 41
     object Memo1: TMemo
       AlignWithMargins = True
       Left = 6
@@ -81,10 +74,6 @@ object Form3: TForm3
       Margins.Bottom = 5
       Align = alClient
       TabOrder = 0
-      ExplicitLeft = 40
-      ExplicitTop = 40
-      ExplicitWidth = 185
-      ExplicitHeight = 89
     end
   end
 end
