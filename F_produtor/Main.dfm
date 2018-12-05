@@ -3,7 +3,7 @@ object Form5: TForm5
   Top = 0
   ActiveControl = Edit1
   Caption = 'TDC POA - 2018 | Enfileiramento - PRODUTOR'
-  ClientHeight = 448
+  ClientHeight = 618
   ClientWidth = 552
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -48,9 +48,9 @@ object Form5: TForm5
   object Panel2: TPanel
     AlignWithMargins = True
     Left = 5
-    Top = 123
+    Top = 164
     Width = 542
-    Height = 320
+    Height = 449
     Margins.Left = 5
     Margins.Top = 5
     Margins.Right = 5
@@ -59,40 +59,99 @@ object Form5: TForm5
     Caption = 'Panel2'
     ShowCaption = False
     TabOrder = 1
-    ExplicitLeft = 10
-    ExplicitHeight = 162
+    ExplicitTop = 123
+    ExplicitHeight = 459
     object Label2: TLabel
-      Left = 168
-      Top = 18
-      Width = 64
-      Height = 27
+      Left = 19
+      Top = 10
+      Width = 66
+      Height = 28
       Caption = 'Label2'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clRed
+      Font.Height = -23
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
     end
     object Button1: TButton
-      Left = 8
-      Top = 8
+      Left = 19
+      Top = 384
       Width = 145
       Height = 49
       Caption = 'ENFILEIRAR'
       TabOrder = 0
       OnClick = Button1Click
     end
-    object Button2: TButton
-      Left = 8
-      Top = 63
-      Width = 145
-      Height = 49
-      Caption = 'THREAD'
-      TabOrder = 1
-    end
     object Button3: TButton
       Left = 336
-      Top = 256
+      Top = 384
       Width = 193
       Height = 49
       Caption = 'NOVA INST'#194'NCIA'
+      TabOrder = 1
+      OnClick = Button3Click
+    end
+    object LabeledEdit1: TLabeledEdit
+      Left = 19
+      Top = 104
+      Width = 121
+      Height = 35
+      EditLabel.Width = 35
+      EditLabel.Height = 27
+      EditLabel.Caption = 'PID'
+      ParentColor = True
+      ReadOnly = True
       TabOrder = 2
     end
+    object LabeledEdit2: TLabeledEdit
+      Left = 19
+      Top = 178
+      Width = 510
+      Height = 35
+      EditLabel.Width = 57
+      EditLabel.Height = 27
+      EditLabel.Caption = 'Nome'
+      TabOrder = 3
+    end
+    object LabeledEdit3: TLabeledEdit
+      Left = 19
+      Top = 253
+      Width = 121
+      Height = 35
+      EditLabel.Width = 56
+      EditLabel.Height = 27
+      EditLabel.Caption = 'Idade'
+      TabOrder = 4
+    end
+    object LabeledEdit4: TLabeledEdit
+      Left = 19
+      Top = 328
+      Width = 510
+      Height = 35
+      EditLabel.Width = 53
+      EditLabel.Height = 27
+      EditLabel.Caption = 'Frase'
+      TabOrder = 5
+    end
+  end
+  object Panel3: TPanel
+    Left = 0
+    Top = 118
+    Width = 552
+    Height = 41
+    Align = alTop
+    Caption = '** PRODUTOR **'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clRed
+    Font.Height = -23
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 2
+    ExplicitLeft = 192
+    ExplicitTop = 296
+    ExplicitWidth = 185
   end
   object Timer1: TTimer
     Enabled = False

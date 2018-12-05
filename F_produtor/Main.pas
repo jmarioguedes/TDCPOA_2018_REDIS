@@ -5,6 +5,7 @@ interface
 uses
   Winapi.Windows,
   Winapi.Messages,
+  Winapi.ShellAPI,
   System.SysUtils,
   System.Variants,
   System.Classes,
@@ -27,10 +28,16 @@ uses
 type
 
   TExemplo = class
-    PID: Integer;
-    Nome: string;
-    Idade: Integer;
-    Frase: string;
+  private
+    FPID  : Cardinal;
+    FNome : string;
+    FIdade: ShortInt;
+    FFrase: string;
+  published
+    property PID  : Cardinal read FPID write FPID;
+    property Nome : string read FNome write FNome;
+    property Idade: ShortInt read FIdade write FIdade;
+    property Frase: string read FFrase write FFrase;
   end;
 
   TForm5 = class(TForm)
@@ -41,11 +48,16 @@ type
     Button1: TButton;
     Label2: TLabel;
     Timer1: TTimer;
-    Button2: TButton;
     Button3: TButton;
+    LabeledEdit1: TLabeledEdit;
+    LabeledEdit2: TLabeledEdit;
+    LabeledEdit3: TLabeledEdit;
+    LabeledEdit4: TLabeledEdit;
+    Panel3: TPanel;
     procedure FormCreate(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure Button1Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
   private
     { Private declarations }
     FPID : Cardinal;
@@ -70,6 +82,11 @@ begin
   Self.EnfileirarComando;
 end;
 
+procedure TForm5.Button3Click(Sender: TObject);
+begin
+  ShellExecute(0, PChar('open'), PChar(Application.ExeName), nil, nil, SW_SHOW);
+end;
+
 procedure TForm5.EnfileirarComando;
 var
   oExemplo     : TExemplo;
@@ -78,10 +95,10 @@ begin
   oExemplo := TExemplo.Create;
 
   try
-    oExemplo.PID   := GetCurrentProcessID;
-    oExemplo.Idade := 41;
-    oExemplo.Nome  := 'JOSÉ MARIO SILVA GUEDES';
-    oExemplo.Frase := 'O RATO ROEU A ROUPA DO REI DE ROMA';
+    oExemplo.PID   := Self.FPID;
+    oExemplo.Nome  := Self.LabeledEdit2.Text;
+    oExemplo.Idade := StrToInt(Self.LabeledEdit3.Text);
+    oExemplo.Frase := Self.LabeledEdit4.Text;
 
     sConteudoJSON := TJson.ObjectToJsonString(oExemplo);
 
@@ -94,6 +111,8 @@ end;
 procedure TForm5.FormCreate(Sender: TObject);
 begin
   Self.FPID := GetCurrentProcessID;
+
+  Self.LabeledEdit1.Text := Self.FPID.ToString;
 
   Self.FConn := TRedisClient.Create('localhost', 6379);
   Self.FConn.Connect;
