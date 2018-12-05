@@ -3,10 +3,13 @@
         <ProjectGuid>{A61F829F-1AE8-4CB3-9B67-902DF4F06020}</ProjectGuid>
     </PropertyGroup>
     <ItemGroup>
-        <Projects Include="A_basico\A_basico.dproj">
+        <Projects Include="A_basico\basico.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="B_benchmark\B_benchmark.dproj">
+        <Projects Include="B_benchmark\benchmark.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="D_cacheamento\cacheamento.dproj">
             <Dependencies/>
         </Projects>
     </ItemGroup>
@@ -17,32 +20,41 @@
             <Default.Personality/>
         </BorlandProject>
     </ProjectExtensions>
-    <Target Name="A_basico">
-        <MSBuild Projects="A_basico\A_basico.dproj"/>
+    <Target Name="basico">
+        <MSBuild Projects="A_basico\basico.dproj"/>
     </Target>
-    <Target Name="A_basico:Clean">
-        <MSBuild Projects="A_basico\A_basico.dproj" Targets="Clean"/>
+    <Target Name="basico:Clean">
+        <MSBuild Projects="A_basico\basico.dproj" Targets="Clean"/>
     </Target>
-    <Target Name="A_basico:Make">
-        <MSBuild Projects="A_basico\A_basico.dproj" Targets="Make"/>
+    <Target Name="basico:Make">
+        <MSBuild Projects="A_basico\basico.dproj" Targets="Make"/>
     </Target>
-    <Target Name="B_benchmark">
-        <MSBuild Projects="B_benchmark\B_benchmark.dproj"/>
+    <Target Name="benchmark">
+        <MSBuild Projects="B_benchmark\benchmark.dproj"/>
     </Target>
-    <Target Name="B_benchmark:Clean">
-        <MSBuild Projects="B_benchmark\B_benchmark.dproj" Targets="Clean"/>
+    <Target Name="benchmark:Clean">
+        <MSBuild Projects="B_benchmark\benchmark.dproj" Targets="Clean"/>
     </Target>
-    <Target Name="B_benchmark:Make">
-        <MSBuild Projects="B_benchmark\B_benchmark.dproj" Targets="Make"/>
+    <Target Name="benchmark:Make">
+        <MSBuild Projects="B_benchmark\benchmark.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="cacheamento">
+        <MSBuild Projects="D_cacheamento\cacheamento.dproj"/>
+    </Target>
+    <Target Name="cacheamento:Clean">
+        <MSBuild Projects="D_cacheamento\cacheamento.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="cacheamento:Make">
+        <MSBuild Projects="D_cacheamento\cacheamento.dproj" Targets="Make"/>
     </Target>
     <Target Name="Build">
-        <CallTarget Targets="A_basico;B_benchmark"/>
+        <CallTarget Targets="basico;benchmark;cacheamento"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="A_basico:Clean;B_benchmark:Clean"/>
+        <CallTarget Targets="basico:Clean;benchmark:Clean;cacheamento:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="A_basico:Make;B_benchmark:Make"/>
+        <CallTarget Targets="basico:Make;benchmark:Make;cacheamento:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

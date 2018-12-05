@@ -1,4 +1,4 @@
-program A_basico;
+program basico;
 
 uses
   Vcl.Forms,

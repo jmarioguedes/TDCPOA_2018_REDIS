@@ -25,14 +25,11 @@ object Form2: TForm2
     Margins.Top = 5
     Margins.Right = 5
     Margins.Bottom = 5
-    ActivePage = TabSheet7
+    ActivePage = TabSheet2
     Align = alClient
     TabOrder = 0
-    ExplicitTop = 211
-    ExplicitHeight = 252
     object TabSheet1: TTabSheet
       Caption = 'SET'
-      ExplicitHeight = 210
       object Image1: TImage
         Left = 8
         Top = 16
@@ -2068,8 +2065,6 @@ object Form2: TForm2
     object TabSheet2: TTabSheet
       Caption = 'GET'
       ImageIndex = 1
-      ExplicitLeft = 0
-      ExplicitHeight = 278
       object Image2: TImage
         Left = 16
         Top = 24
@@ -2106,7 +2101,6 @@ object Form2: TForm2
     object TabSheet3: TTabSheet
       Caption = 'DEL'
       ImageIndex = 2
-      ExplicitHeight = 210
       object Label2: TLabel
         Left = 8
         Top = 71
@@ -2127,8 +2121,6 @@ object Form2: TForm2
     object TabSheet4: TTabSheet
       Caption = 'EXISTS'
       ImageIndex = 3
-      ExplicitLeft = 0
-      ExplicitHeight = 278
       object Label3: TLabel
         Left = 16
         Top = 79
@@ -2149,7 +2141,6 @@ object Form2: TForm2
     object TabSheet5: TTabSheet
       Caption = 'EXPIRE'
       ImageIndex = 4
-      ExplicitHeight = 210
       object Label4: TLabel
         Left = 8
         Top = 136
@@ -2180,7 +2171,6 @@ object Form2: TForm2
     object TabSheet6: TTabSheet
       Caption = 'TTL'
       ImageIndex = 5
-      ExplicitHeight = 210
       object Label5: TLabel
         Left = 8
         Top = 72
@@ -2201,7 +2191,6 @@ object Form2: TForm2
     object TabSheet7: TTabSheet
       Caption = 'KEYS'
       ImageIndex = 6
-      ExplicitLeft = 0
       object Memo3: TMemo
         AlignWithMargins = True
         Left = 5
@@ -2216,10 +2205,6 @@ object Form2: TForm2
         Lines.Strings = (
           'Memo3')
         TabOrder = 0
-        ExplicitLeft = 320
-        ExplicitTop = 136
-        ExplicitWidth = 185
-        ExplicitHeight = 89
       end
       object Panel2: TPanel
         AlignWithMargins = True
@@ -2235,9 +2220,6 @@ object Form2: TForm2
         Caption = 'Panel2'
         ShowCaption = False
         TabOrder = 1
-        ExplicitLeft = 0
-        ExplicitTop = 0
-        ExplicitWidth = 594
         object edtPadraoBusca: TEdit
           Left = 3
           Top = 16

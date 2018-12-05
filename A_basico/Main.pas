@@ -94,6 +94,8 @@ begin
   oPNG    := TPngImage.Create;
 
   try
+    Self.Image2.Picture := nil;
+
     oValue := Self.FConn.GET(Self.Chave);
 
     if oValue.IsNull then

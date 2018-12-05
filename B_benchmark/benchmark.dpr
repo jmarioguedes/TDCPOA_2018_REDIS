@@ -1,4 +1,4 @@
-program B_benchmark;
+program benchmark;
 
 uses
   Vcl.Forms,
