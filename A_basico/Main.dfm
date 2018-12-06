@@ -25,7 +25,7 @@ object Form2: TForm2
     Margins.Top = 5
     Margins.Right = 5
     Margins.Bottom = 5
-    ActivePage = TabSheet2
+    ActivePage = TabSheet1
     Align = alClient
     TabOrder = 0
     object TabSheet1: TTabSheet
@@ -2266,10 +2266,19 @@ object Form2: TForm2
     object edtChave: TEdit
       Left = 12
       Top = 40
-      Width = 574
+      Width = 341
       Height = 35
       TabOrder = 0
       Text = 'TDC:2018:POA:DELPHI#'
+    end
+    object Button5: TButton
+      Left = 369
+      Top = 33
+      Width = 217
+      Height = 49
+      Caption = 'NOVA INST'#194'NCIA'
+      TabOrder = 1
+      OnClick = Button5Click
     end
   end
 end

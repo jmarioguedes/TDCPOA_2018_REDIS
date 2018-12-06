@@ -5,6 +5,7 @@ interface
 uses
   Winapi.Windows,
   Winapi.Messages,
+  Winapi.ShellAPI,
   System.SysUtils,
   System.Variants,
   System.Classes,
@@ -59,6 +60,7 @@ type
     Panel2: TPanel;
     edtPadraoBusca: TEdit;
     Button6: TButton;
+    Button5: TButton;
     procedure FormCreate(Sender: TObject);
     procedure btnSetImageClick(Sender: TObject);
     procedure btnGetImageClick(Sender: TObject);
@@ -69,6 +71,7 @@ type
     procedure Button3Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
     procedure Button6Click(Sender: TObject);
+    procedure Button5Click(Sender: TObject);
   private
     { Private declarations }
     FConn: IRedisClient;
@@ -208,6 +211,11 @@ begin
     Self.Label5.Caption    := Format('FALTAM %d SEGUNDOS PARA A CHAVE SUMIR', [iTempoRestante]);
     Self.Label5.Font.Color := clBlue;
   end;
+end;
+
+procedure TForm2.Button5Click(Sender: TObject);
+begin
+  ShellExecute(0, PChar('open'), PChar(Application.ExeName), nil, nil, SW_SHOW);
 end;
 
 procedure TForm2.Button6Click(Sender: TObject);

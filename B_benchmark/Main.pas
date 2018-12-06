@@ -5,6 +5,7 @@ interface
 uses
   Winapi.Windows,
   Winapi.Messages,
+  Winapi.ShellAPI,
   System.SysUtils,
   System.Variants,
   System.Classes,
@@ -47,7 +48,9 @@ type
     Button1: TButton;
     SpinEdit1: TSpinEdit;
     Memo1: TMemo;
+    Button2: TButton;
     procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
   private
     FBenchmark: TBenchmark;
     procedure QuandoTerminar(Sender: TObject);
@@ -169,6 +172,11 @@ begin
   end;
 
   Self.Log('RecuperarChaves', (GetTickCount() - cInit) / 1000);
+end;
+
+procedure TForm3.Button2Click(Sender: TObject);
+begin
+  ShellExecute(0, PChar('open'), PChar(Application.ExeName), nil, nil, SW_SHOW);
 end;
 
 procedure TForm3.QuandoTerminar(Sender: TObject);

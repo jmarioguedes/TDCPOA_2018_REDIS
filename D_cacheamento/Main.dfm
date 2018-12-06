@@ -29,8 +29,9 @@ object Form4: TForm4
     Caption = 'Panel1'
     ShowCaption = False
     TabOrder = 0
+    ExplicitLeft = 0
     object Button1: TButton
-      Left = 8
+      Left = 6
       Top = 18
       Width = 121
       Height = 49
@@ -54,6 +55,15 @@ object Form4: TForm4
       Height = 41
       Caption = 'Ativar temporizador'
       TabOrder = 2
+    end
+    object Button3: TButton
+      Left = 408
+      Top = 18
+      Width = 121
+      Height = 49
+      Caption = 'LIMPAR'
+      TabOrder = 3
+      OnClick = Button3Click
     end
   end
   object StatusBar1: TStatusBar

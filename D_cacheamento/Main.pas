@@ -61,10 +61,14 @@ type
     Button2: TButton;
     Timer1: TTimer;
     CheckBox1: TCheckBox;
+    Button3: TButton;
     procedure FormCreate(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+  const
+    CHAVE = 'TDC:POA:2018:VENDAS:UF#';
   private
     { Private declarations }
     FConn: IRedisClient;
@@ -90,17 +94,24 @@ begin
   ShellExecute(0, PChar('open'), PChar(Application.ExeName), nil, nil, SW_SHOW);
 end;
 
+procedure TForm4.Button3Click(Sender: TObject);
+begin
+  Self.FConn.DEL([TForm4.CHAVE]);
+end;
+
 procedure TForm4.FormCreate(Sender: TObject);
 begin
   Self.Memo1.Clear;
+
   Self.FDConnection1.Open;
+
   Self.FConn := TRedisClient.Create('localhost', 6379);
   Self.FConn.Connect;
 end;
 
 procedure TForm4.Timer1Timer(Sender: TObject);
 begin
-  if Self.CheckBox1.Enabled then
+  if Self.CheckBox1.Checked then
   begin
     Self.Timer1.Enabled := False;
 
@@ -112,7 +123,6 @@ end;
 
 procedure TForm4.TotalizarPorUF;
 const
-  CHAVE     = 'TDC:POA:2018:VENDAS:UF#';
   SETE_DIAS = 60 * 60 * 24 * 7;
 var
   cInicio: Cardinal;
@@ -126,7 +136,7 @@ begin
   try
     Self.FDQuery1.Close;
 
-    oDados := Self.FConn.GET(CHAVE);
+    oDados := Self.FConn.GET(TForm4.CHAVE);
 
     if oDados.HasValue then
     begin
