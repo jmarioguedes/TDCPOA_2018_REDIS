@@ -2,7 +2,7 @@ object Form7: TForm7
   Left = 0
   Top = 0
   Caption = 'TDC POA - 2018 | Publica'#231#227'o e Assinatura'
-  ClientHeight = 706
+  ClientHeight = 699
   ClientWidth = 456
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -105,8 +105,6 @@ object Form7: TForm7
       Lines.Strings = (
         'Memo1')
       TabOrder = 1
-      ExplicitTop = 152
-      ExplicitHeight = 222
     end
   end
   object Panel2: TPanel
@@ -114,7 +112,7 @@ object Form7: TForm7
     Left = 5
     Top = 395
     Width = 446
-    Height = 223
+    Height = 216
     Margins.Left = 5
     Margins.Top = 5
     Margins.Right = 5
@@ -125,9 +123,7 @@ object Form7: TForm7
     ParentBackground = False
     ShowCaption = False
     TabOrder = 1
-    ExplicitLeft = 0
-    ExplicitTop = 435
-    ExplicitHeight = 183
+    ExplicitHeight = 206
     object Label4: TLabel
       Left = 16
       Top = 16
@@ -165,7 +161,7 @@ object Form7: TForm7
     end
     object Button3: TButton
       Left = 113
-      Top = 164
+      Top = 146
       Width = 203
       Height = 49
       Caption = 'PUBLICAR'
@@ -184,7 +180,7 @@ object Form7: TForm7
   object Panel3: TPanel
     AlignWithMargins = True
     Left = 5
-    Top = 628
+    Top = 621
     Width = 446
     Height = 73
     Margins.Left = 5
@@ -195,8 +191,7 @@ object Form7: TForm7
     Caption = 'Panel3'
     ShowCaption = False
     TabOrder = 2
-    ExplicitTop = 376
-    ExplicitWidth = 465
+    ExplicitTop = 628
     object Button1: TButton
       Left = 232
       Top = 13
