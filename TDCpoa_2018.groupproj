@@ -18,6 +18,9 @@
         <Projects Include="G_consumidor\consumidor.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="H_pubsub\pubsub.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -71,14 +74,23 @@
     <Target Name="consumidor:Make">
         <MSBuild Projects="G_consumidor\consumidor.dproj" Targets="Make"/>
     </Target>
+    <Target Name="pubsub">
+        <MSBuild Projects="H_pubsub\pubsub.dproj"/>
+    </Target>
+    <Target Name="pubsub:Clean">
+        <MSBuild Projects="H_pubsub\pubsub.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="pubsub:Make">
+        <MSBuild Projects="H_pubsub\pubsub.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="basico;benchmark;cacheamento;produtor;consumidor"/>
+        <CallTarget Targets="basico;benchmark;cacheamento;produtor;consumidor;pubsub"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="basico:Clean;benchmark:Clean;cacheamento:Clean;produtor:Clean;consumidor:Clean"/>
+        <CallTarget Targets="basico:Clean;benchmark:Clean;cacheamento:Clean;produtor:Clean;consumidor:Clean;pubsub:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="basico:Make;benchmark:Make;cacheamento:Make;produtor:Make;consumidor:Make"/>
+        <CallTarget Targets="basico:Make;benchmark:Make;cacheamento:Make;produtor:Make;consumidor:Make;pubsub:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

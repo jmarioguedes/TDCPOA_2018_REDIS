@@ -2065,6 +2065,10 @@ object Form2: TForm2
     object TabSheet2: TTabSheet
       Caption = 'GET'
       ImageIndex = 1
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object Image2: TImage
         Left = 16
         Top = 24
@@ -2101,6 +2105,10 @@ object Form2: TForm2
     object TabSheet3: TTabSheet
       Caption = 'DEL'
       ImageIndex = 2
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object Label2: TLabel
         Left = 8
         Top = 71
@@ -2121,6 +2129,10 @@ object Form2: TForm2
     object TabSheet4: TTabSheet
       Caption = 'EXISTS'
       ImageIndex = 3
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object Label3: TLabel
         Left = 16
         Top = 79
@@ -2141,6 +2153,10 @@ object Form2: TForm2
     object TabSheet5: TTabSheet
       Caption = 'EXPIRE'
       ImageIndex = 4
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object Label4: TLabel
         Left = 8
         Top = 136
@@ -2171,6 +2187,10 @@ object Form2: TForm2
     object TabSheet6: TTabSheet
       Caption = 'TTL'
       ImageIndex = 5
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object Label5: TLabel
         Left = 8
         Top = 72
@@ -2191,6 +2211,10 @@ object Form2: TForm2
     object TabSheet7: TTabSheet
       Caption = 'KEYS'
       ImageIndex = 6
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object Memo3: TMemo
         AlignWithMargins = True
         Left = 5
