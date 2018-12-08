@@ -21,6 +21,15 @@
         <Projects Include="H_pubsub\pubsub.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="I_senha_totem\senha_totem.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="J_senha_balcao\senha_balcao.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="K_senha_painel\senha_painel.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -83,14 +92,41 @@
     <Target Name="pubsub:Make">
         <MSBuild Projects="H_pubsub\pubsub.dproj" Targets="Make"/>
     </Target>
+    <Target Name="senha_totem">
+        <MSBuild Projects="I_senha_totem\senha_totem.dproj"/>
+    </Target>
+    <Target Name="senha_totem:Clean">
+        <MSBuild Projects="I_senha_totem\senha_totem.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="senha_totem:Make">
+        <MSBuild Projects="I_senha_totem\senha_totem.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="senha_balcao">
+        <MSBuild Projects="J_senha_balcao\senha_balcao.dproj"/>
+    </Target>
+    <Target Name="senha_balcao:Clean">
+        <MSBuild Projects="J_senha_balcao\senha_balcao.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="senha_balcao:Make">
+        <MSBuild Projects="J_senha_balcao\senha_balcao.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="senha_painel">
+        <MSBuild Projects="K_senha_painel\senha_painel.dproj"/>
+    </Target>
+    <Target Name="senha_painel:Clean">
+        <MSBuild Projects="K_senha_painel\senha_painel.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="senha_painel:Make">
+        <MSBuild Projects="K_senha_painel\senha_painel.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="basico;benchmark;cacheamento;produtor;consumidor;pubsub"/>
+        <CallTarget Targets="basico;benchmark;cacheamento;produtor;consumidor;pubsub;senha_totem;senha_balcao;senha_painel"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="basico:Clean;benchmark:Clean;cacheamento:Clean;produtor:Clean;consumidor:Clean;pubsub:Clean"/>
+        <CallTarget Targets="basico:Clean;benchmark:Clean;cacheamento:Clean;produtor:Clean;consumidor:Clean;pubsub:Clean;senha_totem:Clean;senha_balcao:Clean;senha_painel:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="basico:Make;benchmark:Make;cacheamento:Make;produtor:Make;consumidor:Make;pubsub:Make"/>
+        <CallTarget Targets="basico:Make;benchmark:Make;cacheamento:Make;produtor:Make;consumidor:Make;pubsub:Make;senha_totem:Make;senha_balcao:Make;senha_painel:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
