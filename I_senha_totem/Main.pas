@@ -58,8 +58,8 @@ procedure TForm8.ProximaSenha;
 var
   iNext: NativeInt;
 begin
-  iNext := Self.FConn.INCR('TDC:POA:2018:SENHA:CONTROLE');
-  Self.FConn.RPUSH('TDC:POA:2018:SENHA:FILA', [iNext.ToString]);
+  iNext := Self.FConn.INCR('TDC:POA:2018:SENHA:CONTROLE#');
+  Self.FConn.RPUSH('TDC:POA:2018:SENHA:FILA#', [iNext.ToString]);
   Self.Label2.Caption := iNext.ToString;
 end;
 

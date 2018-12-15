@@ -66,7 +66,7 @@ begin
   Self.Label2.Caption := 'Buscando ...';
   Application.ProcessMessages;
 
-  oProximo := Self.FConn.BLPOP(['TDC:POA:2018:SENHA:FILA'], 10);
+  oProximo := Self.FConn.BLPOP(['TDC:POA:2018:SENHA:FILA#'], 10);
   if oProximo.HasValue then
   begin
     Self.Label2.Caption := oProximo.Value[1].Value;
@@ -76,7 +76,7 @@ begin
     sSenha  := oProximo.Value[1].Value;
 
     sMensagem := Format('%s|%s', [sBalcao, sSenha]);
-    Self.FConn.PUBLISH('TDC:POA:2018:SENHA:PUBSUB', sMensagem);
+    Self.FConn.PUBLISH('TDC:POA:2018:SENHA:PUBSUB#', sMensagem);
   end else begin
     Self.Label2.Caption := 'NINGUÉM';
     Application.ProcessMessages;

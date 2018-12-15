@@ -56,7 +56,7 @@ begin
       // Inicia a assinatura dos canais (Só retorna quando encerrar a assinatura)
       oRedis.SUBSCRIBE(
         // Lista de canais sendo assinados
-        ['TDC:POA:2018:SENHA:PUBSUB'],
+        ['TDC:POA:2018:SENHA:PUBSUB#'],
 
         // Método anônimo que trata a mensagem recebida
         procedure(ACanal: string; AMensagem: string)
@@ -69,8 +69,8 @@ begin
           sBalcao := Copy(AMensagem, 0, iSeparador - 1);
           sSenha := Copy(AMensagem, iSeparador + 1, MaxInt);
 
-          Self.Label2.Caption := sBalcao;
-          Self.Label3.Caption := sSenha;
+          Self.Label2.Caption := 'BALCÃO ' + sBalcao;
+          Self.Label3.Caption := 'SENHA ' + sSenha;
         end
 
         ); // oRedis.SUBSCRIBE
