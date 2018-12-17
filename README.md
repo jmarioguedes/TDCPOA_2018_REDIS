@@ -4,7 +4,7 @@ Repositório de exemplos do TDC Porto Alegre de 2018, Trilha Delphi, em 08/12/20
 
 Slides da apresentação no [SlideShare](https://www.slideshare.net/jmarioguedes/turbinando-o-seu-sistema-com-redis).
 
-Conheça os nossos cursos: http://arrayof.com.br
+Conheça os nossos cursos: http://arrayof.com.br .
 
 Índice
 ======
